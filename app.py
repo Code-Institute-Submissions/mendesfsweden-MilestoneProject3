@@ -11,9 +11,16 @@ app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_recipes')
-def get_recipes():
-    return render_template("recipes.html", recipes=mongo.db.recipes.find())
+def home():
+    recently_added=mongo.db.recipes.find().sort([("date",-1)]).limit(4)
+    top_four=mongo.db.recipes.find().sort([("clicks",-1)]).limit(4)
+    return render_template("home.html", recently_added=recently_added, top_four=top_four)
+    #calculate top 4 and 4 recently added
+
+@app.route('/recipe/<recipe_id>')
+def get_recipe(recipe_id):
+    return render_template('recipe.html', recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),

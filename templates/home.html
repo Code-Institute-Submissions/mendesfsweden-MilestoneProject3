@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Recently Added:</h1>
+<ul>
+{% for rec in recently_added %}
+    <li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
+{% endfor %}
+</ul>
+<h1>Most Viewed:</h1>
+<ul>
+{% for rec in top_four %}
+    <li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
+{% endfor %}
+</ul>
+{% endblock %}
+
