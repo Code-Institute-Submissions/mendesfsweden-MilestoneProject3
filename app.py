@@ -22,6 +22,17 @@ def get_recipe(recipe_id):
     mongo.db.recipes.update_one({'_id': ObjectId(recipe_id)}, {"$inc":{"clicks": 1}})
     return render_template('recipe.html', recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
 
+@app.route('/recipes')
+def get_recipes():
+    page = request.args.get('page')
+    if not page:
+        return redirect('/recipes?page=1')
+    try:
+        page = int(page)
+    except (TypeError, ValueError):
+        return redirect('/recipes?page=1')
+    return render_template('recipes.html', recipes=mongo.db.recipes.find().sort([("clicks",-1)]).skip((page-1)*6 if page > 1 else 0).limit(6), page=page if page > 0 else 1)
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),

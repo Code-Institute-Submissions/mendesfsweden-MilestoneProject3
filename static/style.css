@@ -3,7 +3,8 @@
 #logo{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
-    color: #fafafa;   
+    color: #fafafa;
+    text-decoration: none;   
 }
 
 .btn-header {
@@ -15,11 +16,11 @@
 }
 
 .bg-nav-bar {
-    background-color: #135109;
+    background-color: #269014;
 }
 
 .social-media {
-    background: #135109;
+    background: #269014;
     width: 100vw;
     height: 100px;
 }
