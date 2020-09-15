@@ -19,6 +19,7 @@ def home():
 
 @app.route('/recipe/<recipe_id>')
 def get_recipe(recipe_id):
+    mongo.db.recipes.update_one({'_id': ObjectId(recipe_id)}, {"$inc":{"clicks": 1}})
     return render_template('recipe.html', recipe=mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)}))
 
 
