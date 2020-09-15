@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300&display=swap');
+
+#logo{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    color: #fafafa;   
+}
+
+.btn-header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #fafafa;
+    margin-right: 7px;
+    font-weight: 300;
+}
+
+.bg-nav-bar {
+    background-color: #135109;
+}
+
+.social-media {
+    background: #135109;
+    width: 100vw;
+    height: 100px;
+}
+
