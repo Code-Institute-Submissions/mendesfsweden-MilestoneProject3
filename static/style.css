@@ -12,7 +12,7 @@
     font-size: 16px;
     color: #fafafa;
     margin-right: 7px;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 .bg-nav-bar {
@@ -25,3 +25,18 @@
     height: 100px;
 }
 
+.btn-edit {
+    background: #269014;
+    color: #fafafa;
+    margin: 20px 10px 0 0 ;
+    height: 50px;
+    width: 100px;
+}
+
+.btn-del {
+    background: #51050D;
+    color: #fafafa;
+    margin: 20px 10px 0 0;
+    height: 50px;
+    width: 100px;
+}
