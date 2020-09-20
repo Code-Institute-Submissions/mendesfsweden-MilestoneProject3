@@ -33,6 +33,20 @@ def get_recipes():
         return redirect('/recipes?page=1')
     return render_template('recipes.html', recipes=mongo.db.recipes.find().sort([("clicks",-1)]).skip((page-1)*6 if page > 1 else 0).limit(6), page=page if page > 0 else 1)
 
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template('add_recipe.html', cuisines=mongo.db.cuisines.find().sort([("name", 1)]))
+
+@app.route('/insert_recipe', methods=["POST"])
+def insert_recipe():
+    mongo.db.recipes.insert_one(request.form.to_dict())
+    return redirect(url_for("get_recipes"))
+
+@app.route('/recipes/<recipe_id>/delete', methods=["POST"])
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('get_recipes'))
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),

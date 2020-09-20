@@ -28,7 +28,7 @@
 .btn-edit {
     background: #269014;
     color: #fafafa;
-    margin: 20px 10px 0 0 ;
+    margin: 20px 10px 20px 0 ;
     height: 50px;
     width: 100px;
 }
@@ -39,4 +39,14 @@
     margin: 20px 10px 0 0;
     height: 50px;
     width: 100px;
+}
+
+.img-h {
+    max-height: 200px;
+    padding: 10px;
+    border: none;
+}
+
+.card-new {
+    margin: 10px;
 }

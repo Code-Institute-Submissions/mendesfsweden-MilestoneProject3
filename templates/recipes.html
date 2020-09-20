@@ -1,11 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Recipes:</h1>
-<ul>
-{% for rec in recipes %}
-    <li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
-{% endfor %}
-</ul>
+<div class="boxed">
+	<h1>Recipes:</h1>
+		<div class="row row-cols-1 row-cols-md-3">
+			{% for rec in recipes %}
+            <a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
+			<div class="col mb-4 card-new">
+				<div class="card">
+					<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">{{rec.name}}</h5>
+						<p class="card-text">{{rec.cuisine_name}}</p>
+					</div>
+				</div>
+			</div>
+            </a>
+				{% endfor %}
+		</div>
+		<a>&lt;</a>
+		<h5>{{page}}</h5><a>&gt;</a>
+	</div>
 
-<a>&lt;</a><h5>{{page}}</h5><a>&gt;</a> 
 {% endblock %}
