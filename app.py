@@ -1,4 +1,5 @@
 import os
+import re
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -24,6 +25,7 @@ def get_recipe(recipe_id):
 
 @app.route('/recipes')
 def get_recipes():
+    search=request.args.get('search')
     page = request.args.get('page')
     if not page:
         return redirect('/recipes?page=1')
@@ -31,7 +33,8 @@ def get_recipes():
         page = int(page)
     except (TypeError, ValueError):
         return redirect('/recipes?page=1')
-    return render_template('recipes.html', recipes=mongo.db.recipes.find().sort([("clicks",-1)]).skip((page-1)*6 if page > 1 else 0).limit(6), page=page if page > 0 else 1)
+    recipes=mongo.db.recipes.find() if not search else mongo.db.recipes.find({'name':re.compile(rf'{search}',re.I)})
+    return render_template('recipes.html', recipes=recipes.sort([("clicks",-1)]).skip((page-1)*6 if page > 1 else 0).limit(6), page=page if page > 0 else 1)
 
 @app.route('/add_recipe')
 def add_recipe():
@@ -54,7 +57,7 @@ def edit_recipe(recipe_id):
 @app.route('/recipes/<recipe_id>/update', methods=["POST"])
 def update_recipe(recipe_id):
     mongo.db.recipes.update({'_id': ObjectId(recipe_id)}, request.form.to_dict())
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('get_recipe', recipe_id=recipe_id))
 
 
 
