@@ -16,11 +16,11 @@
 	</div>
 	<div class="col-md-6">
 		<h3 class="sub-headers">Most Viewed:</h3>
-		<ul>
+		<ol>
 			{% for rec in top_four %}
 			<li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
 			{% endfor %}
-		</ul>
+		</ol>
 	</div>
 <div>
 {% endblock %}
