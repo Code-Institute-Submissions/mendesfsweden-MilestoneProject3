@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<nav class="navbar sticky-top navbar-expand-lg bg-nav-bar navbar-dark">
+	<nav class="navbar fixed-top navbar-expand-lg bg-nav-bar navbar-dark position-relative">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -33,28 +33,28 @@
       </li>
     </ul>
   </div>
-  <a class="navbar-brand" id="logo" href="{{url_for('home')}}">theFoodLibrary</a>
+  <a class="navbar-brand position-absolute" id="logo" href="{{url_for('home')}}">theFoodLibrary</a>
 </nav>
 
 	{% block content %}
 	{% endblock %}
 
 	<div class="social-media text-center">
-		<ul class="list-inline social-links">
+		<ul class="list-inline pt-4">
 			<li class="list-inline-item">
-				<a target="_blank" href="https://www.facebook.com/">
+				<a class="social-links" target="_blank" href="https://www.facebook.com/">
 					<i class="fa fa-facebook" aria-hidden="true"></i>
 					<span class="sr-only">Facebook</span>
 				</a>
 			</li>
 			<li class="list-inline-item">
-				<a target="_blank" href="https://www.linkedin.com/">
+				<a class="social-links target="_blank" href="https://www.linkedin.com/">
 					<i class="fa fa-linkedin" aria-hidden="true"></i>
 					<span class="sr-only">LinkedIn</span>
 				</a>
 			</li>
 			<li class="list-inline-item">
-				<a target="_blank" href="https://www.instagram.com/ceramica.antonio">
+				<a class="social-links target="_blank" href="https://www.instagram.com/ceramica.antonio">
 					<i class="fa fa-instagram" aria-hidden="true"></i>
 					<span class="sr-only">Instagram</span>
 				</a>
