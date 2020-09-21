@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300&display=swap');
 
-body a {
+a {
     text-decoration: none;
     color: #269014;
+}
+
+li {
+    list-style: none;
 }
 
 #logo{
@@ -69,7 +73,7 @@ body a {
     color: black;
     width: 100vw;
     font-family: 'Open Sans', sans-serif;
-    margin: 20px 0 20px 0;
+    margin: 50px 0 50px 0;
     text-align: center;
  }
 
@@ -83,3 +87,13 @@ body a {
 
  }
 
+.divider {
+    width: 400px;
+    text-align: center;
+    background-color: #269014;
+}
+
+.container-links {
+    margin-top:50px;
+    margin-bottom: 50px; 
+}
