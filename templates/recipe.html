@@ -2,9 +2,8 @@
 {% block content %}
 <div class="container">
         <div class="col-md-12 text-center">
-            <form action="{{url_for('edit_recipe', recipe_id=recipe._id)}}" method="GET">
-            <button type="submit" class="btn btn-edit">Edit</button>
-            </form>
+            <form id="edit_form" action="{{url_for('edit_recipe', recipe_id=recipe._id)}}" method="GET"></form>
+            <button form="edit_form" type="submit" class="btn btn-edit">Edit</button>
             <button type="button" class="btn btn-del" data-toggle="modal" data-target="#deleteModal">Delete</button>
   <!-- Modal -->
   <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
