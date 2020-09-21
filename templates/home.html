@@ -5,16 +5,22 @@
 <div class="container-header">
 	<h2 class="header-home">Help us build the largest recipe library in the world! Add one today!</h2>
 </div>
-<h1>Recently Added:</h1>
-<ul>
-	{% for rec in recently_added %}
-	<li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
-	{% endfor %}
-</ul>
-<h1>Most Viewed:</h1>
-<ul>
-	{% for rec in top_four %}
-	<li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
-	{% endfor %}
-</ul>
+<div class="row">
+	<div class="col-md-6">
+		<h3 class="sub-headers">Recently Added:</h3>
+		<ul>
+			{% for rec in recently_added %}
+			<li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<h3 class="sub-headers">Most Viewed:</h3>
+		<ul>
+			{% for rec in top_four %}
+			<li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
+			{% endfor %}
+		</ul>
+	</div>
+<div>
 {% endblock %}
