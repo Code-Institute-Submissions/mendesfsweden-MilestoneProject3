@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="container-fluid container-home">
+</div>
+<div class="container-header">
+	<h2 class="header-home">Help us build the largest recipe library in the world! Add one today!</h2>
+</div>
 <h1>Recently Added:</h1>
 <ul>
-{% for rec in recently_added %}
-    <li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
-{% endfor %}
+	{% for rec in recently_added %}
+	<li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
+	{% endfor %}
 </ul>
 <h1>Most Viewed:</h1>
 <ul>
-{% for rec in top_four %}
-    <li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
-{% endfor %}
+	{% for rec in top_four %}
+	<li><a href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
+	{% endfor %}
 </ul>
 {% endblock %}
-

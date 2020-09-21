@@ -11,8 +11,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #fafafa;
-    margin-right: 7px;
-    font-weight: bold;
+    margin-right: 10px;
 }
 
 .bg-nav-bar {
@@ -50,3 +49,25 @@
 .card-new {
     margin: 10px;
 }
+
+.container-home {
+     height: 450px;
+    position: relative;
+    background: url("/static/images/home-bg.jpg") no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.header-home {
+    color: black;
+    width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px;
+    text-align: center;
+ }
+
+ .container-header {
+     border-bottom: #269014 solid 2px;
+ }
