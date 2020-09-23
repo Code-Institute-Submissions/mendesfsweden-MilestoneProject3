@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="boxed">
-    <form method="GET">
+    <div class="container">
+    <div class="row row-cols-1 row-cols-md-3">
+        <div class="col mt-1">
+	<h1>Recipes</h1>
+        </div>
+        <div class="col mt-3">
+    <form class="form-inline" method="GET">
         <input type="hidden" name="page" value="1">
-        <input type="text" name="search" minlength="3" placeholder="Search...">
-        <button type="submit">Search</button>
+        <input class="form-control mx-2" type="text" name="search" minlength="3" placeholder="Search...">
+        <button class="btn btn-success" type="submit">Search</button>
     </form>
-	<h1>Recipes:</h1>
+        </div>
+    </div>
+    <div class="boxed ">
 		<div class="row row-cols-1 row-cols-md-3">
 			{% for rec in recipes %}
             <a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
@@ -23,10 +30,21 @@
 			{% endfor %}
 		</div>
         <div class="text-center mb-3">
-		<a>&lt;</a>
+        <span>
+		{% if not prev %}
+            <a>&lt;</a>
+        {% else %}
+            <a href="{{prev}}">&lt;</a>
+        {% endif %}
 		<span>{{page}}</span>
-        <a>&gt;</a>
+        {% if not nxt %}
+            <a>&gt;</a>
+        {% else %}
+            <a href="{{nxt}}">&gt;</a>
+        {% endif %}
+     
         </div>
     </div>
+</div>
 
 {% endblock %}

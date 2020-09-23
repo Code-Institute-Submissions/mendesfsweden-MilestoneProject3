@@ -1,53 +1,56 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-        <div class="col-md-12 text-center">
-            <form id="edit_form" action="{{url_for('edit_recipe', recipe_id=recipe._id)}}" method="GET"></form>
-            <button form="edit_form" type="submit" class="btn btn-edit">Edit</button>
-            <button type="button" class="btn btn-del" data-toggle="modal" data-target="#deleteModal">Delete</button>
-  <!-- Modal -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Delete Recipe</h5>
-          <button type="button" class="close" data-dismiss="modal">
+	<div class="col-md-12 text-center">
+		<form id="edit_form" action="{{url_for('edit_recipe', recipe_id=recipe._id)}}" method="GET"></form>
+		<button form="edit_form" type="submit" class="btn btn-edit">Edit</button>
+		<button type="button" class="btn btn-del" data-toggle="modal" data-target="#deleteModal">Delete</button>
+		<!-- Modal -->
+		<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Delete Recipe</h5>
+						<button type="button" class="close" data-dismiss="modal">
             <span>×</span>
           </button>
-        </div>
-        <div class="modal-body">
-          Are you sure you want to delete the recipe?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <form method="POST" action="{{url_for('delete_recipe', recipe_id=recipe._id)}}">
-          <button type="submit" class="btn btn-primary">Delete</button>
-          </form>
-        </div>
-      </div>
+					</div>
+					<div class="modal-body">
+						Are you sure you want to delete the recipe?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+						<form method="POST" action="{{url_for('delete_recipe', recipe_id=recipe._id)}}">
+							<button type="submit" class="btn btn-primary">Delete</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3>{{recipe.name}}</h3>
+	<h3>Cuisine</h3>
+	<ul>
+		<li>{{recipe.cuisine_name}}</li>
+	</ul>
+	<h3>Ingredients</h3>
+	<ul>
+		{% for ing in recipe.ingredients.split(",") %}
+		<li> - {{ing.title()}}</li>
+		{% endfor %}
+	</ul>
+	<h3>Tools</h3>
+	<ul>
+		{% for tool in recipe.tools.split(",") %}
+		<li> - {{tool.title()}}</li>
+		{% endfor %}
+	</ul>
+	<h3>Portions</h3>
+	<ul>
+		<li>{{recipe.portions}}</li>
+	</ul>
+    <div class="text-center">
+	<img src="{{recipe.image}}" width="600vw">
     </div>
-  </div>
-        </div>
-        <h3>{{recipe.name}}</h3>
-        <h3>Cuisine</h3>
-        <ul>
-        <li>{{recipe.cuisine_name}}</li>
-        </ul>
-        <h3>Ingredients</h3>
-        <ul>
-        {% for ing in recipe.ingredients.split(",") %}
-            <li> - {{ing.title()}}</li>
-        {% endfor %}
-        </ul>
-        <h3>Tools</h3>
-        <ul>
-        {% for tool in recipe.tools.split(",") %}
-            <li> - {{tool.title()}}</li>
-        {% endfor %}
-        </ul>
-        <h3>Portions</h3>
-        <ul>
-        <li>{{recipe.portions}}</li>
-        </ul>
-    </div>
-{% endblock %}
+</div>
+	{% endblock %}
