@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300&display=swap');
 
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .home-rec-links {
     text-decoration: none;
     color: #269014;
@@ -117,6 +122,16 @@ li {
 
 a:hover{
     text-decoration: none;
+    color:  #269014;
+}
+
+a{
     color: black;
 }
 
+.border-search {
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 2px #269014 solid;
+    
