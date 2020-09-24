@@ -47,7 +47,7 @@ li {
 .btn-edit {
     background: #269014;
     color: #fafafa;
-    margin: 20px 10px 20px 0 ;
+    margin: 30px 10px 20px 0 ;
     height: 50px;
     width: 100px;
 }
@@ -55,7 +55,7 @@ li {
 .btn-del {
     background: #51050D;
     color: #fafafa;
-    margin: 20px 10px 0 0;
+    margin: 30px 10px 20px 0;
     height: 50px;
     width: 100px;
 }
@@ -134,4 +134,5 @@ a{
     border-left:none;
     border-right:none;
     border-bottom: 2px #269014 solid;
-    
+}
+

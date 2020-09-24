@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-<h3>Add Recipe:</h3>
+<h3 class="mt-5 mb-3">Add Recipe</h3>
 <form action="{{ url_for('insert_recipe') }}" method="POST">
 	<div class="form-group">
 		<label for="name">Recipe Name</label>
