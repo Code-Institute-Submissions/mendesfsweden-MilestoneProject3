@@ -23,12 +23,13 @@
 			{% for rec in recipes %}
 			<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
 				<div class="col mb-4 card-new">
-					<div class="card">
+					<div class="card card-recipe">
 						<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
 						<div class="card-body">
 							<h5 class="card-title">{{rec.name}}</h5>
 							<p class="card-text">
-								{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}
+								<!--{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}-->
+                                Preparation Time: {{rec.prep_time}}
 							</p>
 						</div>
 					</div>

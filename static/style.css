@@ -136,3 +136,6 @@ a{
     border-bottom: 2px #269014 solid;
 }
 
+.card-recipe {
+    border:none;
+}
