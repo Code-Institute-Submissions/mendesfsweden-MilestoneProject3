@@ -5,23 +5,53 @@
 <div class="">
 	<h2 class="header-home text-center">Help us build the largest recipe library in the world! Add one today!</h2>
 </div>
-<hr class="divider">
-<div class="row">
-	<div class="col-md-6 pb-5 pt-5 text-center">
-		<h3 class="sub-headers">Recently Added:</h3>
-		<ul class="home-rec">
+<hr class="divider mb-5">
+<div class="container">
+	<h3 class="sub-headers text-center font-weight-bold">Recently Added</h3>
+	<div class="boxed ">
+		<div class="row row-cols-1 row-cols-md-3">
 			{% for rec in recently_added %}
-			<li><a class="home-rec-links" href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
+			<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
+				<div class="col mb-4 card-new">
+					<div class="card card-recipe">
+						<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">{{rec.name}}</h5>
+							<p class="card-text">
+								<!--{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}-->
+								Preparation Time: {{rec.prep_time}}
+							</p>
+						</div>
+					</div>
+				</div>
+			</a>
 			{% endfor %}
-		</ul>
+		</div>
+		<h3 class="sub-headers text-center font-weight">Most Viewed</h3>
+		<div class="boxed ">
+			<div class="row row-cols-1 row-cols-md-3">
+				{% for rec in top_four %}
+				<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
+					<div class="col mb-4 card-new">
+						<div class="card card-recipe">
+							<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">{{rec.name}}</h5>
+								<p class="card-text">
+									<!--{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}-->
+									Preparation Time: {{rec.prep_time}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
 	</div>
-	<div class="col-md-6 pb-5 pt-5 text-center">
-		<h3 class="sub-headers">Most Viewed:</h3>
-		<ol class="home-rec">
-			{% for rec in top_four %}
-			<li><a class="home-rec-links" href='/recipe/{{rec._id}}'> {{rec.name}} </a></li>
-			{% endfor %}
-		</ol>
-	</div>
-<div>
+</div>
+</div>
+</div>
+</div>
+
 {% endblock %}
