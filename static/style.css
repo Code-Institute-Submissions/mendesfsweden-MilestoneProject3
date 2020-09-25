@@ -141,7 +141,8 @@ a {
 }
 
 .img{
-    width: 45vw;
+    width: 70vw;
+    height: 60vh;
     object-fit: contain;
 }
 
