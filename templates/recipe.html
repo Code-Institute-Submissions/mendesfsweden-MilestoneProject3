@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
+<div class="container page-title">
 	<div class="col-md-12 text-center">
 		<form id="edit_form" action="{{url_for('edit_recipe', recipe_id=recipe._id)}}" method="GET"></form>
 		<button form="edit_form" type="submit" class="btn btn-edit">Edit</button>
