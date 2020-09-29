@@ -1,5 +1,4 @@
-import os
-import re
+import os, datetime, re
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -8,6 +7,7 @@ app = Flask(__name__)
 
 app.config['MONGO_DBNAME'] = 'FoodLibrary'
 app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
+
 
 mongo = PyMongo(app)
 page_limit = 6
@@ -41,7 +41,7 @@ def get_recipes():
     previous_url=url_for('get_recipes', page=page-1, search=search) if page > initial_page else None
     next_url=url_for('get_recipes', page=page+1, search=search) if page*page_limit < count else None
 
-    return render_template('recipes.html', recipes=recipes.sort([("date",-1)]).skip((page-1)*page_limit if page > 1 else 0).limit(6), page=page if page > 0 else 1, previous=previous_url, next=next_url)   
+    return render_template('recipes.html', recipes=recipes.sort([("date",-1)]).skip((page-initial_page)*page_limit if page > initial_page else 0).limit(page_limit), page=(page if count > page_limit else None) if page > 0 else initial_page,  previous=previous_url, next=next_url)   
 
 
 @app.route('/add_recipe')
@@ -50,7 +50,9 @@ def add_recipe():
 
 @app.route('/insert_recipe', methods=["POST"])
 def insert_recipe():
-    mongo.db.recipes.insert_one(request.form.to_dict())
+    recipe=request.form.to_dict()
+    recipe["date"]=datetime.datetime.now()
+    mongo.db.recipes.insert_one(recipe)
     return redirect(url_for("get_recipes"))
 
 @app.route('/recipes/<recipe_id>/delete', methods=["POST"])
