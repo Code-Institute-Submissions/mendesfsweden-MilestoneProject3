@@ -7,7 +7,7 @@
     </div>
 		<h3>Cuisine</h3>
 		<ul>
-			<li>{{recipe.cuisine_name}}</li>
+			<li>{{recipe.cuisine}}</li>
 		</ul>
 		<h3>Ingredients</h3>
 		<ul>
@@ -25,6 +25,15 @@
 		<ul>
 			<li>{{recipe.portions}}</li>
 		</ul>
+        <h3>Preparation Time</h3>
+        <ul>
+			<li>{{recipe.prep_time}}</li>
+		</ul>
+        <h3>Instructions</h3>
+        <ul>
+			<li>{{recipe.instructions}}</li>
+		</ul>
+
 		<div class="col-md-12 text-center">
 			<form id="edit_form" action="{{url_for('edit_recipe', recipe_id=recipe._id)}}" method="GET"></form>
 			<button form="edit_form" type="submit" class="btn btn-edit">Edit</button>
