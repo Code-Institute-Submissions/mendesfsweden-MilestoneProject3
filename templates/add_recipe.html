@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container page-title">
-<h3 class="mt-5 mb-3">Add Recipe</h3>
+<h1 class="mt-5 mb-3">Add Recipe</h1>
 <form action="{{ url_for('insert_recipe') }}" method="POST">
 	<div class="form-group">
 		<label for="name">Recipe Name</label>
@@ -37,7 +37,7 @@
   </div>
     <div class="form-group">
     <label for="image">Image URL</label>
-    <input name="image" type="url" class="form-control" id="image" required>
+    <input name="image" type="url" class="form-control" id="image">
   </div>
   <div class="text-center">
   <button class="btn btn-edit" type="submit">Add</button>

@@ -3,7 +3,11 @@
 <div class="container page-title">
     <h3>{{recipe.name}}</h3>
 	<div class="text-center mb-4">
+    {% if not recipe.image %}
+    <img src="/static/images/default_image.png" class="mb-5 mt-5 img">
+    {% else %}
 		<img src="{{recipe.image}}" class="mb-5 mt-5 img">
+    {% endif %}    
     </div>
 		<h3>Cuisine</h3>
 		<ul>

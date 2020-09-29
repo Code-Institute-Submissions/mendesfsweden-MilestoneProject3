@@ -24,7 +24,11 @@
 			<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
 				<div class="col mb-4 card-new">
 					<div class="card card-recipe">
+						{% if not rec.image %}
+						<img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
+                        {% else %}
 						<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+                        {% endif %}
 						<div class="card-body">
 							<h5 class="card-title">{{rec.name}}</h5>
 							<p class="card-text">
