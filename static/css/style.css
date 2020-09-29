@@ -13,7 +13,7 @@ li {
     list-style: none;
 }
 
-#logo{
+#logo {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 30px;
     color: #fafafa;
@@ -67,31 +67,29 @@ li {
 }
 
 .container-home {
-     height: 450px;
+    height: 450px;
     position: relative;
     background: url("/static/images/home-bg.jpg") no-repeat center top;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .header-home {
     color: black;
     width: 100vw;
     font-family: 'Open Sans', sans-serif;
-    margin: 50px 0 50px 0;
-    
+    margin: 50px 0 50px 0; 
  }
 
  .container-header {
-     border-bottom: #269014 solid 2px;
+    border-bottom: #269014 solid 2px;
  }
 
  .sub-headers {
-     font-family: 'Open Sans', sans-serif;
-     margin-left: 20px;
-
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 20px;
  }
 
 .divider {
