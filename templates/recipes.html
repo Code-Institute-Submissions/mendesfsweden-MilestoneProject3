@@ -39,16 +39,16 @@
 		</div>
 		<div class="text-center mb-3">
 			<span>
-		{% if not prev %}
+		{% if not previous %}
             <a>&lt;</a>
         {% else %}
-            <a href="{{prev}}">&lt;</a>
+            <a href="{{previous}}">&lt;</a>
         {% endif %}
 		<span>{{page}}</span>
-			{% if not nxt %}
+			{% if not next %}
 			<a>&gt;</a>
 			{% else %}
-			<a href="{{nxt}}">&gt;</a>
+			<a href="{{next}}">&gt;</a>
 			{% endif %}
 
 		</div>

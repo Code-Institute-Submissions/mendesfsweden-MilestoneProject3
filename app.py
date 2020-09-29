@@ -36,10 +36,10 @@ def get_recipes():
     query={} if not search else {'name':re.compile(rf'{search}',re.I)}
     count=mongo.db.recipes.count(query)
     recipes=mongo.db.recipes.find(query)
-    prev=url_for('get_recipes', page=page-1, search=search) if page > 1 else None
-    nxt=url_for('get_recipes', page=page+1, search=search) if page*6 < count else None
+    previous_url=url_for('get_recipes', page=page-1, search=search) if page > 1 else None
+    next_url=url_for('get_recipes', page=page+1, search=search) if page*6 < count else None
 
-    return render_template('recipes.html', recipes=recipes.sort([("clicks",-1)]).skip((page-1)*6 if page > 1 else 0).limit(6), page=page if page > 0 else 1, prev=prev, nxt=nxt)   
+    return render_template('recipes.html', recipes=recipes.sort([("clicks",-1)]).skip((page-1)*6 if page > 1 else 0).limit(6), page=page if page > 0 else 1, previous=previous_url, next=next_url)   
 
 
 @app.route('/add_recipe')
