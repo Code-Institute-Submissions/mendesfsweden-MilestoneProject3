@@ -10,6 +10,7 @@ app.config['MONGO_DBNAME'] = 'FoodLibrary'
 app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
+page_limit = 6
 
 @app.route('/')
 def home():
@@ -37,9 +38,9 @@ def get_recipes():
     count=mongo.db.recipes.count(query)
     recipes=mongo.db.recipes.find(query)
     previous_url=url_for('get_recipes', page=page-1, search=search) if page > 1 else None
-    next_url=url_for('get_recipes', page=page+1, search=search) if page*6 < count else None
+    next_url=url_for('get_recipes', page=page+1, search=search) if page*page_limit < count else None
 
-    return render_template('recipes.html', recipes=recipes.sort([("clicks",-1)]).skip((page-1)*6 if page > 1 else 0).limit(6), page=page if page > 0 else 1, previous=previous_url, next=next_url)   
+    return render_template('recipes.html', recipes=recipes.sort([("clicks",-1)]).skip((page-1)*page_limit if page > 1 else 0).limit(6), page=page if page > 0 else 1, previous=previous_url, next=next_url)   
 
 
 @app.route('/add_recipe')
