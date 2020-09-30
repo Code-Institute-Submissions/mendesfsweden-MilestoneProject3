@@ -2,6 +2,8 @@
 
 <h2 align="center"> MS3 - Data Centric Development - Code Institute </h2>
 
+[Click here for a live demo version of this project.](https://the-food-library.herokuapp.com/)
+
 This project is a recipes dictionary. The main goal is to make it possible for the users to find, add, update/edit and delete recipes. 
 
 ## User Experience (UX)
