@@ -6,6 +6,8 @@
 
 This project is a recipes dictionary. The main goal is to make it possible for the users to find, add, update/edit and delete recipes. 
 
+<img src="static/images/demo.png" width="1000" height="400">
+
 ## User Experience (UX)
 
 -   ### User stories
