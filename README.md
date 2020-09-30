@@ -59,7 +59,7 @@ This project is a recipes dictionary. The main goal is to make it possible for t
 ### Frameworks, Libraries & Programs Used
 
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Press Start 2P' font into the style.css file which is the font used in this project.
+    - Google fonts were used to import the "Josefin Sans" and "Open Sans" fonts into the style.css file, which are the fonts used in this project.
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
