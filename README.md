@@ -79,13 +79,6 @@ This project is a recipes dictionary. The main goal is to make it possible for t
 
 ## Deployment
 
-### GitHub Pages
-
-I used the following procedure to deploy my project to GitHub pages: 
-
--  Logged in to Github and opened the repository pages.
--  Accessed the "Settings" and scrolled down to the source field. Then, changed the "Branch" to Master instead of "None". 
--  The page was automatically reloaded and by scrolling down to the "GitHub Pages" section I could verify that the project was published.
 
 ### Forking the GitHub Repository
 
