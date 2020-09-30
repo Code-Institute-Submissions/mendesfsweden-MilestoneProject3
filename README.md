@@ -11,7 +11,7 @@ This project is a recipes dictionary. The main goal is to make it possible for t
     -   #### User Goals
         
         1. As a User, I want to easily understand the purpose of the website.
-        2. As a User, I want to have access to the whole list of recipes.
+        2. As a User, I want to be able to have access to all the recipes.
         3. As a User, I want to be able to add a new recipe.
         4. As a User, I want to be able to update/edit a recipe.
         5. As a User, I want to be able to delete a recipe.
@@ -30,3 +30,47 @@ This project is a recipes dictionary. The main goal is to make it possible for t
         
     -   #### Typography
         -   The font-family "Josefine Sans" is the one used for the logo. For the website content the font-family used is "Open Sans". Sans Serif is the fallback font used in case  'Josefin Sans' and/or "Open Sans" are not being imported into the project correctly.
+
+    -   #### Imagery
+        -   All the images are food related. The user can add an image for each and every added recipe by adding a URL to the image field. As adding an URL for the image is not a requirement, a default image (website logo) will be displayed instead.
+        
+## Features
+
+-   Responsive on all device sizes
+
+-   The user has access to all the recipes by clicking on the "Recipes" button on the navigation bar. The recipes are displayed on cards that include a recipe image(or default image), recipe name and preparation time. 
+
+-   There are 6 recipe cards displayed per page, at the bottom of the "Recipes" page the user can use the arrows to move the previous or next page of recipes.
+
+-   The user can add a new recipe by clicking on the "Add Recipe" button on the navigation bar.
+
+-   The user can edit/update or delete a recipe by clicking on the "edit" or "delete" buttons, respectively. The buttons can be found at the bottom of each recipe page.
+
+-   The user can use a search bar to look for a recipe by name. The search bar is located in the "Recipes" page, above the recipe cards.
+
+## Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries & Programs Used
+
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import the 'Press Start 2P' font into the style.css file which is the font used in this project.
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+1. [Figma:](https://figma.com/)
+    - Figma was used to create the wireframes for this project.
+1. [Pymongo:](https://pymongo.readthedocs.io/en/stable/#)
+    - The PyMongo library was used for interaction with the MongoDB database through Python.
+1. [jQuery:](https://jquery.com/)
+    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
+1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Bootstrap was used to assist with the responsiveness and styling of the website.
+1. [Flask:](https://flask.palletsprojects.com/en/1.1.x/)
+    - Flask was the framework used to build the application.
