@@ -74,3 +74,38 @@ This project is a recipes dictionary. The main goal is to make it possible for t
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Flask:](https://flask.palletsprojects.com/en/1.1.x/)
     - Flask was the framework used to build the application.
+
+## Deployment
+
+### GitHub Pages
+
+I used the following procedure to deploy my project to GitHub pages: 
+
+-  Logged in to Github and opened the repository pages.
+-  Accessed the "Settings" and scrolled down to the source field. Then, changed the "Branch" to Master instead of "None". 
+-  The page was automatically reloaded and by scrolling down to the "GitHub Pages" section I could verify that the project was published.
+
+### Forking the GitHub Repository
+
+Forking the GitHub repository allows other developers to make a copy and work on it without changing the original. As a developer, you can fork a repository as follows:
+
+-  Access the repository and click on the "Fork" button(located at the top right corner of the page), and a copy of the original repository will be created in your own account.
+
+### Making a Local Clone
+
+To make a local Clone, do the following:
+
+-  Open the repository and click on the green button saying "Code". By clicking on it a dropdown menu reveals the "Clone with HTTPS" link, which can then be copied.
+-  Open Git Bash and change the directory to the desired working location for the clone. After that, use the `git clone` command and paste the link that was copied ealier. 
+
+Below is an example of what is seen on screen when the clone is being created:
+
+
+```
+$ git clone https://github.com/USERNAME/REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
