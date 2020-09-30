@@ -109,3 +109,13 @@ $ git clone https://github.com/USERNAME/REPOSITORY
 > remove: Total 10 (delta 1), reused 10 (delta 1)
 > Unpacking objects: 100% (10/10), done.
 ```
+
+## Credits
+
+### Media
+
+-   The hero image is from the free stock image library [Jooinn](https://jooinn.com/).
+
+### Acknowledgements
+
+-   My Mentor for continuous helpful feedback.
