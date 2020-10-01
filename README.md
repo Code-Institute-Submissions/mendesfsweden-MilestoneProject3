@@ -23,7 +23,7 @@ This project is a recipes dictionary. The main goal is to make it possible for t
         #### Frequent User Goals
         
         1. As a Frequent User, I want to be able to check if there are any new recipes added.
-        2. As a Frequent User, I want to be able to check which recipes are the most viewed/popular.
+        2. As a Frequent User, I want to be able to check which recipes are the most viewed.
        
         
 -   ### Design
@@ -106,6 +106,15 @@ This project is a recipes dictionary. The main goal is to make it possible for t
     
         1. In the "Recipes" section, a search bar is available to the user in order to search for a recipe by name. 
         
+-   #### Frequent User Goals
+
+    1. As a Frequent User, I want to be able to check if there are any new recipes added.
+
+        1. At the home page, the user will find a section displaying the last three recently added recipes. 
+        
+     2. As a Frequent User, I want to be able to check which recipes are the most viewed.
+        
+        1. At the home page, the user will find a section displaying the three most viewed recipes.
 
 ## Deployment
 
