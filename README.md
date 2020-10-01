@@ -98,7 +98,7 @@ This project is a recipes dictionary. The main goal is to make it possible for t
         
         1. By clicking on the "Add Recipe" section on the navigation bar, the user will be redirected to a page containing an add recipe form.
         
-    4. As a User, I want to be able to update/edit a recipe.
+    4. As a User, I want to be able to update/edit or delete a recipe.
     
         1. When at a given recipe's page, the user will have access to an edit button and a delete button (loacted at the bottom of the page). Those buttons will allow the user to update or delete the recipe, respectively.
         
