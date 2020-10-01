@@ -67,7 +67,7 @@ This project is a recipes dictionary. The main goal is to make it possible for t
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
-    - GitHub is used to store the projects code after being pushed from Git.
+    - GitHub is used to store the project's code after being pushed from Git.
 1. [Figma:](https://figma.com/)
     - Figma was used to create the wireframes for this project.
 1. [Pymongo:](https://pymongo.readthedocs.io/en/stable/#)
@@ -77,7 +77,9 @@ This project is a recipes dictionary. The main goal is to make it possible for t
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Flask:](https://flask.palletsprojects.com/en/1.1.x/)
-    - Flask was the framework used to build the application.
+    - Flask was the micro framework used to build the application.
+1. [MongoDB:](https://mongodb.com/)
+    - MongoDB Atlas was the database service used to store the project's data.
 
 ## Deployment
 
