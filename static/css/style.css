@@ -36,7 +36,6 @@ li {
 
 .social-media {
     background: #269014;
-    width: 100vw;
     height: 100px;
 }
 
@@ -57,13 +56,18 @@ li {
 }
 
 .img-h {
-    max-height: 200px;
     padding: 10px;
     border: none;
 }
 
+@media only screen and (max-width: 767px) {
+    .img-h {
+        max-height: 245px;
+    }
+}
+
 .card-new {
-    margin: 10px;
+    margin: 0;
 }
 
 .container-home {
@@ -78,7 +82,6 @@ li {
 
 .header-home {
     color: black;
-    width: 100vw;
     font-family: 'Open Sans', sans-serif;
     margin: 50px 0 50px 0; 
  }
@@ -89,13 +92,19 @@ li {
 
  .sub-headers {
     font-family: 'Open Sans', sans-serif;
-    margin-left: 20px;
+    margin: 0;
  }
 
 .divider {
     width: 400px;
     text-align: center;
     background-color: #269014;
+}
+
+@media only screen and (max-width: 430px) {
+    .divider {
+        width: 75%;
+    }
 }
 
 .container-links {
@@ -123,7 +132,7 @@ a {
     color: black;
 }
 
-.border-search {
+.border-search-bar {
     border-top:none;
     border-left:none;
     border-right:none;
