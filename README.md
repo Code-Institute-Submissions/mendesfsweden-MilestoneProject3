@@ -17,9 +17,8 @@ This project is a recipes dictionary. The main goal is to make it possible for t
         1. As a User, I want to easily understand the purpose of the website.
         2. As a User, I want to be able to have access to all the recipes.
         3. As a User, I want to be able to add a new recipe.
-        4. As a User, I want to be able to update/edit a recipe.
-        5. As a User, I want to be able to delete a recipe.
-        6. As a User, I want to be able to search for any recipe by name.
+        4. As a User, I want to be able to update/edit or delete a recipe.
+        5. As a User, I want to be able to search for any recipe by name.
         
         #### Frequent User Goals
         
@@ -80,6 +79,33 @@ This project is a recipes dictionary. The main goal is to make it possible for t
     - Flask was the micro framework used to build the application.
 1. [MongoDB:](https://mongodb.com/)
     - MongoDB Atlas was the database service used to store the project's data.
+    
+## Testing
+
+### Testing User Stories from User Experience (UX) Section
+
+-   #### User Goals
+
+    1. As a User, I want to easily understand the purpose of the website.
+
+        1. Upon entering the site, the user will have a clear understanding of the website's purpose by reading the header bellow the hero image. There is also a navigation bar that will allow the user to easily go through all the different sections available.
+        
+    2. As a User, I want to be able to have access to all the recipes.
+    
+        1. By clicking on the "Recipes" section on the navigation bar, the user will be redirected to the page that contains the whole recipes collection.
+     
+    3. As a User, I want to be able to add a new recipe.
+        
+        1. By clicking on the "Add Recipe" section on the navigation bar, the user will be redirected to a page containing an add recipe form.
+        
+    4. As a User, I want to be able to update/edit a recipe.
+    
+        1. When at a given recipe's page, the user will have access to an edit button and a delete button (loacted at the bottom of the page). Those buttons will allow the user to update or delete the recipe, respectively.
+        
+    5. As a User, I want to be able to search for any recipe by name.
+    
+        1. In the "Recipes" section, a search bar is available to the user in order to search for a recipe by name. 
+        
 
 ## Deployment
 
