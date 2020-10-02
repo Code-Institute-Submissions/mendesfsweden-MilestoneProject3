@@ -82,6 +82,12 @@ This project is a recipes dictionary. The main goal is to make it possible for t
     
 ## Testing
 
+The two services used to validate the code in this project and to ensure there were no syntax errors were W3C Markup Validator and W3C CSS Validator.
+
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results]()
+-   [W3C CSS Validator](http://jigsaw.w3.org/css-validator/) - [Results]()
+
+
 ### Testing User Stories from User Experience (UX) Section
 
 -   #### User Goals
