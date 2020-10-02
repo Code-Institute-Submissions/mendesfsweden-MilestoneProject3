@@ -46,12 +46,12 @@
 			<span>
 		{% if not previous %}
         {% else %}
-            <a href="{{previous}}">&lt;</a>
+            <a class="arrow" href="{{previous}}">&lt;</a>
         {% endif %}
 		<span>{{page}}</span>
 			{% if not next %}
 			{% else %}
-			<a href="{{next}}">&gt;</a>
+			<a class="arrow" href="{{next}}">&gt;</a>
 			{% endif %}
 
 		</div>
