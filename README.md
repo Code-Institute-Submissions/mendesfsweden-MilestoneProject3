@@ -118,31 +118,24 @@ This project is a recipes dictionary. The main goal is to make it possible for t
 
 ## Deployment
 
+### Deployment to Heroku
 
-### Forking the GitHub Repository
+This project was deployed to Heroku. Find the steps bellow:
 
-Forking the GitHub repository allows other developers to make a copy and work on it without changing the original. As a developer, you can fork a repository as follows:
+1. Install Heroku on Gitpod (npm install -g heroku)
+2. Go to Heroku webpage and create a new app
+3. Go to the app Settings, choose Reveal Config. Vars and set the IP, PORT and MONGO_URI variables
+4. Login to Heroku from Gitpod
+5. Check if the app was created successfully (heroku apps)
+6. Create requirements.txt file
+7. Create Procfile (echo web: python nameOfPythonFile.py > Procfile)
+8. Commit to Github
+9. Create a remote to my local repository (heroku git:remote -a appName)
+10. Push to Github and Heroku simulataneously (git push && git push heroku master)
 
--  Access the repository and click on the "Fork" button(located at the top right corner of the page), and a copy of the original repository will be created in your own account.
-
-### Making a Local Clone
-
-To make a local Clone, do the following:
-
--  Open the repository and click on the green button saying "Code". By clicking on it a dropdown menu reveals the "Clone with HTTPS" link, which can then be copied.
--  Open Git Bash and change the directory to the desired working location for the clone. After that, use the `git clone` command and paste the link that was copied ealier. 
-
-Below is an example of what is seen on screen when the clone is being created:
-
-
-```
-$ git clone https://github.com/USERNAME/REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+To submit any changes to my code I follow steps number 9 and 10:
+- Create a remote to my local repository (heroku git:remote -a appName)
+- Push to Github and Heroku simulataneously (git push && git push heroku master)	
 
 ## Credits
 
