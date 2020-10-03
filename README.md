@@ -122,6 +122,16 @@ The two services used to validate the code in this project and to ensure there w
         
         1. At the home page, the user will find a section displaying the three most viewed recipes.
 
+### Further Testing
+
+-   The project was tested on the following browsers: Google Chrome, Internet Explorer, Microsoft Edge, Brave and Safari.
+-   The project was tested on the following devices: MacBookAir, Huawei P30, Iphone XS and Ipad.
+-   theFoodLibrary was tested by friends and family to obtain User feedback, improve User Experience and detect any potencial issues. 
+
+### Known Bugs
+
+-   On Microsoft Edge the <hr> tag (representing the thin green line on the home page) appears positioned to the left of the screen. 
+
 ## Deployment
 
 ### Deployment to Heroku
