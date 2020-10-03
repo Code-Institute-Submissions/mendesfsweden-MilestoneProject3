@@ -20,7 +20,7 @@ This project is a recipes dictionary. The main goal is to make it possible for t
         4. As a User, I want to be able to update/edit or delete a recipe.
         5. As a User, I want to be able to search for any recipe by name.
         
-        #### Frequent User Goals
+    -   #### Frequent User Goals
         
         1. As a Frequent User, I want to be able to check if there are any new recipes added.
         2. As a Frequent User, I want to be able to check which recipes are the most viewed.
