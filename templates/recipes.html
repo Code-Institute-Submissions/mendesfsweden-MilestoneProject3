@@ -1,62 +1,60 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container page-title">
-	<div class="text-left ml-3 mt-3">
-		<h1>Recipes</h1>
-	</div>
-	<div class="text-right">
-		<form class="form-inline" method="GET">
-        <div class="input-group mb-3">
-        <div class="input-group-append">
-        <button class="btn btn-success ml-3" type="submit">Go</button>
-        </div>
-			<input type="hidden" name="page" value="1">
-			<input class="form-control border-search-bar" type="text" name="search" minlength="3" placeholder="Search...">
-			</div>
-		</form>
-	</div>
+    <div class="text-left ml-3 mt-3">
+        <h1>Recipes</h1>
+    </div>
+    <div class="text-right">
+        <form class="form-inline" method="GET">
+            <div class="input-group mb-3">
+                <div class="input-group-append">
+                    <button class="btn btn-success ml-3" type="submit">Go</button>
+                </div>
+                <input type="hidden" name="page" value="1">
+                <input class="form-control border-search-bar" type="text" name="search" minlength="3"
+                    placeholder="Search...">
+            </div>
+        </form>
+    </div>
 </div>
-
 <div class="container">
-	<div class="boxed ">
-		<div class="row row-cols-1 row-cols-md-3">
-			{% for rec in recipes %}
-			<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
-				<div class="col mb-4 card-new">
-					<div class="card card-recipe">
-						{% if not rec.image %}
-						<img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
+    <div class="boxed ">
+        <div class="row row-cols-1 row-cols-md-3">
+            {% for rec in recipes %}
+            <a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
+                <div class="col mb-4 card-new">
+                    <div class="card card-recipe">
+                        {% if not rec.image %}
+                        <img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
                         {% else %}
-						<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+                        <img src="{{rec.image}}" class="card-img-top img-h" alt="...">
                         {% endif %}
-						<div class="card-body">
-							<h5 class="card-title">{{rec.name}}</h5>
-							<p class="card-text">
-								<!--{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}-->
+                        <div class="card-body">
+                            <h5 class="card-title">{{rec.name}}</h5>
+                            <p class="card-text">
+                                <!--{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}-->
                                 Preparation Time: {{rec.prep_time}}
-							</p>
-						</div>
-					</div>
-				</div>
-			</a>
-			{% endfor %}
-		</div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
         {% if page %}
-		<div class="text-center mb-3">
-			<span>
-		{% if not previous %}
-        {% else %}
-            <a class="arrow" href="{{previous}}">&lt;</a>
+        <div class="text-center mb-3">
+            <span>
+                {% if not previous %}
+                {% else %}
+                <a class="arrow" href="{{previous}}">&lt;</a>
+                {% endif %}
+                <span>{{page}}</span>
+                {% if not next %}
+                {% else %}
+                <a class="arrow" href="{{next}}">&gt;</a>
+                {% endif %}
+        </div>
         {% endif %}
-		<span>{{page}}</span>
-			{% if not next %}
-			{% else %}
-			<a class="arrow" href="{{next}}">&gt;</a>
-			{% endif %}
-
-		</div>
-        {% endif %}
-	</div>
-</div>
+    </div>
 </div>
 {% endblock %}
