@@ -35,7 +35,7 @@ This project is a recipes dictionary. The main goal is to make it possible for t
         -   The font-family "Josefine Sans" is the one used for the logo. For the website content the font-family used is "Open Sans". Sans Serif is the fallback font used in case  'Josefin Sans' and/or "Open Sans" are not being imported into the project correctly.
 
     -   #### Imagery
-        -   All the images are food related. The user can add an image for each and every added recipe by adding a URL to the image field. As adding an URL for the image is not a requirement, a default image (website logo) will be displayed instead.
+        -   All the images are food related. The user can add an image for each and every added recipe by adding a URL to the image field. If the user does not supply a image URL, a default image (website logo) will be displayed instead.
         
 ## Features
 
