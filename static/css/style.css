@@ -40,9 +40,11 @@ body {
 }
 
 .header-home {
-    color: black;
+    color: #fafafa;
     font-family: 'Open Sans', sans-serif;
-    margin: 50px 0 50px 0; 
+    font-size: 20px;
+    padding-top: 250px; 
+    width: 50%;
  }
 
  .divider {
