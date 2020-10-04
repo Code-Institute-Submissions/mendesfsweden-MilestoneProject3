@@ -94,7 +94,7 @@ body {
     width: 100px;
 }
 
-.img{
+.recipe-img {
     width: 70%;
     object-fit: contain;
 }

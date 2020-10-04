@@ -8,7 +8,6 @@ app = Flask(__name__)
 app.config['MONGO_DBNAME'] = 'FoodLibrary'
 app.config['MONGO_URI'] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
-
 mongo = PyMongo(app)
 page_limit = 6
 initial_page = 1

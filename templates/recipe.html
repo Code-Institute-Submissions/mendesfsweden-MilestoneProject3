@@ -4,9 +4,9 @@
     <h3>{{recipe.name}}</h3>
     <div class="text-center">
         {% if not recipe.image %}
-        <img src="/static/images/default_image.png" class="mb-5 mt-5 img">
+        <img src="/static/images/default_image.png" class="mb-5 mt-5 recipe-img">
         {% else %}
-        <img src="{{recipe.image}}" class="mb-5 mt-5 img">
+        <img src="{{recipe.image}}" class="mb-5 mt-5 recipe-img">
         {% endif %}
     </div>
     <h3>Cuisine</h3>
