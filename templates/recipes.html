@@ -19,6 +19,7 @@
 </div>
 <div class="container">
     <div class="boxed ">
+    {% if count > 0 %}
         <div class="row row-cols-1 row-cols-md-3">
             {% for recipe in recipes %}
             <a href="{{url_for('get_recipe', recipe_id=recipe._id)}}">
@@ -40,6 +41,9 @@
             </a>
             {% endfor %}
         </div>
+        {% else %}
+        <p>No results found!</p>
+        {% endif %}
         {% if page %}
         <div class="text-center mb-3">
             <span>

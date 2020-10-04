@@ -40,7 +40,7 @@ def get_recipes():
     previous_url=url_for('get_recipes', page=page-1, search=search) if page > initial_page else None
     next_url=url_for('get_recipes', page=page+1, search=search) if page*page_limit < count else None
 
-    return render_template('recipes.html', recipes=recipes.sort([("date",-1)]).skip((page-initial_page)*page_limit if page > initial_page else 0).limit(page_limit), page=(page if count > page_limit else None) if page > 0 else initial_page,  previous=previous_url, next=next_url)   
+    return render_template('recipes.html', recipes=recipes.sort([("date",-1)]).skip((page-initial_page)*page_limit if page > initial_page else 0).limit(page_limit), page=(page if count > page_limit else None) if page > 0 else initial_page,  previous=previous_url, next=next_url, count=count)   
 
 
 @app.route('/add_recipe')
