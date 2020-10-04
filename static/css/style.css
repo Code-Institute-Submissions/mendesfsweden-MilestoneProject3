@@ -130,7 +130,7 @@ body {
     color: black;
 }
 
-.img-h {
+.card-img {
     padding: 10px;
     border: none;
     max-height: 190px; 
@@ -145,11 +145,6 @@ body {
 
 .page-title {
     margin-top: 120px;
-}
-
-.img-container {
-    height: 190px;
-    overflow: hidden;
 }
 
 .title-center-text {

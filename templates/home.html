@@ -7,7 +7,7 @@
 </div>
 <div class="container">
 	<h3 class="sub-headers text-center font-weight-bold mt-5">Recently Added</h3>
-	<hr class="divider mb-3">
+	<hr class="divider mb-4">
 	<div class="boxed ">
 		<div class="row row-cols-1 row-cols-md-3">
 			{% for rec in recently_added %}
@@ -15,9 +15,9 @@
 				<div class="col mb-4 card-info">
 					<div class="card card-border">
 						{% if not rec.image %}
-						<img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
+						<img src="/static/images/default_image.png" class="card-img-top card-img" alt="...">
                         {% else %}
-						<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+						<img src="{{rec.image}}" class="card-img-top card-img" alt="...">
                         {% endif %}
 						<div class="card-body">
 							<h5 class="card-title">{{rec.name}}</h5>
@@ -31,14 +31,14 @@
 			{% endfor %}
 		</div>
 		<h3 class="sub-headers text-center font-weight-bold">Most Viewed</h3>
-		<hr class="divider mb-3">
+		<hr class="divider mb-4">
 		<div class="boxed ">
 			<div class="row row-cols-1 row-cols-md-3">
 				{% for rec in top_four %}
 				<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
 					<div class="col mb-4 card-info">
 						<div class="card card-border">
-							<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+							<img src="{{rec.image}}" class="card-img-top card-img" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">{{rec.name}}</h5>
 								<p class="card-text">
