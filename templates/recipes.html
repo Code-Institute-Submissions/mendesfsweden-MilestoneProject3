@@ -22,19 +22,18 @@
         <div class="row row-cols-1 row-cols-md-3">
             {% for rec in recipes %}
             <a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
-                <div class="col mb-4 card-new">
-                    <div class="card card-recipe">
+                <div class="col mb-4 card-info">
+                    <div class="card card-border">
                         {% if not rec.image %}
-                        <img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
+                        <img src="/static/images/default_image.png" class="img-h" alt="...">
                         {% else %}
                         <div class="img-container">
-                            <img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+                            <img src="{{rec.image}}" class="img-h" alt="...">
                         </div>
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{rec.name}}</h5>
                             <p class="card-text">
-                                <!--{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}-->
                                 Preparation Time: {{rec.prep_time}}
                             </p>
                         </div>

@@ -120,11 +120,11 @@ body {
     color: black;
 }
 
-.card-recipe {
+.card-border {
     border:none;
 }
 
-.card-new {
+.card-info {
     color: black;
 }
 
@@ -164,7 +164,7 @@ body {
     color: black;
 }
 
-.card-new:hover{
+.card-info:hover{
     color:  #269014;
 }
 

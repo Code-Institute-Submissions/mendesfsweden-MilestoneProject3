@@ -12,8 +12,8 @@
 		<div class="row row-cols-1 row-cols-md-3">
 			{% for rec in recently_added %}
 			<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
-				<div class="col mb-4 card-new">
-					<div class="card card-recipe">
+				<div class="col mb-4 card-info">
+					<div class="card card-border">
 						{% if not rec.image %}
 						<img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
                         {% else %}
@@ -36,8 +36,8 @@
 			<div class="row row-cols-1 row-cols-md-3">
 				{% for rec in top_four %}
 				<a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
-					<div class="col mb-4 card-new">
-						<div class="card card-recipe">
+					<div class="col mb-4 card-info">
+						<div class="card card-border">
 							<img src="{{rec.image}}" class="card-img-top img-h" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">{{rec.name}}</h5>
