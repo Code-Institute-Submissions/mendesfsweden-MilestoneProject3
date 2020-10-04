@@ -15,9 +15,9 @@ initial_page = 1
 
 @app.route('/')
 def home():
-    recently_added=mongo.db.recipes.find().sort([("date",-1)]).limit(3)
-    top_four=mongo.db.recipes.find().sort([("clicks",-1)]).limit(3)
-    return render_template("home.html", recently_added=recently_added, top_four=top_four)
+    recently_added_recipes=mongo.db.recipes.find().sort([("date",-1)]).limit(3)
+    most_viewed_recipes=mongo.db.recipes.find().sort([("clicks",-1)]).limit(3)
+    return render_template("home.html", recently_added_recipes=recently_added_recipes, most_viewed_recipes=most_viewed_recipes)
 
 @app.route('/recipe/<recipe_id>')
 def get_recipe(recipe_id):

@@ -15,8 +15,8 @@
     </div>
     <h3>Ingredients</h3>
     <ul class="recipe-field-list">
-        {% for ing in recipe.ingredients.split(",") %}
-        <li>{{ing.title()}}</li>
+        {% for ingredient in recipe.ingredients.split(",") %}
+        <li>{{ingredient.title()}}</li>
         {% endfor %}
     </ul>
     <h3>Tools</h3>
@@ -35,8 +35,8 @@
     </div>
     <h3>Instructions</h3>
     <ul>
-        {% for inst in recipe.instructions.split("\n") %}
-        <li class="inst-list">{{inst.title()}}</li>
+        {% for instruction in recipe.instructions.split("\n") %}
+        <li class="inst-list">{{instruction.title()}}</li>
         {% endfor %}
     </ul>
     <div class="col-md-12 text-center">
