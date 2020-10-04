@@ -156,6 +156,9 @@ body {
     overflow: hidden;
 }
 
+.title-center-text {
+    margin: 0 auto;
+}
 
 /*-----------hovers------------*/
 
