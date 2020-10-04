@@ -20,19 +20,19 @@
 <div class="container">
     <div class="boxed ">
         <div class="row row-cols-1 row-cols-md-3">
-            {% for rec in recipes %}
-            <a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
+            {% for recipe in recipes %}
+            <a href="{{url_for('get_recipe', recipe_id=recipe._id)}}">
                 <div class="col mb-4 card-info">
                     <div class="card card-border">
-                        {% if not rec.image %}
+                        {% if not recipe.image %}
                         <img src="/static/images/default_image.png" class="card-img-top card-img" alt="...">
                         {% else %}
-                            <img src="{{rec.image}}" class="card-img-top card-img" alt="...">
+                            <img src="{{recipe.image}}" class="card-img-top card-img" alt="...">
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title">{{rec.name}}</h5>
+                            <h5 class="card-title">{{recipe.name}}</h5>
                             <p class="card-text">
-                                Preparation Time: {{rec.prep_time}}
+                                Preparation Time: {{recipe.prep_time}}
                             </p>
                         </div>
                     </div>
