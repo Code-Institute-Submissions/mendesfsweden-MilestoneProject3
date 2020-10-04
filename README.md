@@ -130,7 +130,7 @@ The two services used to validate the code in this project and to ensure there w
 
 ### Known Bugs
 
--   On Microsoft Edge the <hr> tag (representing the thin green line on the home page) appears positioned to the left of the screen. 
+-   On Microsoft Edge the "hr" tag (representing the thin green line on the home page) appears positioned to the left of the screen. 
 
 ## Deployment
 
