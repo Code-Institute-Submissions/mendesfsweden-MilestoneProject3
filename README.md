@@ -84,8 +84,8 @@ This project is a recipes dictionary. The main goal is to make it possible for t
 
 The two services used to validate the code in this project and to ensure there were no syntax errors were W3C Markup Validator and W3C CSS Validator.
 
--   [W3C Markup Validator](https://validator.w3.org/) - [Results]()
--   [W3C CSS Validator](http://jigsaw.w3.org/css-validator/) - [Results]()
+-   [W3C Markup Validator](https://validator.w3.org/) - [Results](https://validator.w3.org/nu/?doc=http%3A%2F%2Fthe-food-library.herokuapp.com%2F)
+-   [W3C CSS Validator](http://jigsaw.w3.org/css-validator/) - [Results](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fthe-food-library.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) (By direct input, the css code passes without any errors.)
 
 
 ### Testing User Stories from User Experience (UX) Section
