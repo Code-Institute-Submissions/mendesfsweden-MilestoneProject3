@@ -72,7 +72,6 @@ This project is a recipes dictionary. The main goal is to make it possible for t
 1. [Pymongo:](https://pymongo.readthedocs.io/en/stable/#)
     - The PyMongo library was used for interaction with the MongoDB database through Python.
 1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
 1. [Bootstrap:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Flask:](https://flask.palletsprojects.com/en/1.1.x/)
