@@ -27,7 +27,9 @@
                         {% if not rec.image %}
                         <img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
                         {% else %}
-                        <img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+                        <div class="img-container">
+                            <img src="{{rec.image}}" class="card-img-top img-h" alt="...">
+                        </div>
                         {% endif %}
                         <div class="card-body">
                             <h5 class="card-title">{{rec.name}}</h5>
