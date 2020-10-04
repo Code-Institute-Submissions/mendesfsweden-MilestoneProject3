@@ -18,7 +18,6 @@ def home():
     recently_added=mongo.db.recipes.find().sort([("date",-1)]).limit(3)
     top_four=mongo.db.recipes.find().sort([("clicks",-1)]).limit(3)
     return render_template("home.html", recently_added=recently_added, top_four=top_four)
-    #calculate top 4 and 4 recently added
 
 @app.route('/recipe/<recipe_id>')
 def get_recipe(recipe_id):

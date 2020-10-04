@@ -132,6 +132,18 @@ body {
     color: black;
 }
 
+.img-h {
+    padding: 10px;
+    border: none;
+    max-height: 190px; 
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    .img-h {
+        max-height: 245px;
+    }
+}
 
 /*-----------add/edit/recipe and recipes pages------------*/
 
@@ -140,7 +152,7 @@ body {
 }
 
 .img-container {
-    height: 245px;
+    height: 190px;
     overflow: hidden;
 }
 
