@@ -131,6 +131,7 @@ The two services used to validate the code in this project and to ensure there w
 ### Known Bugs
 
 -   On Microsoft Edge the "hr" tag (representing the thin green line on the home page) appears positioned to the left of the screen. 
+-   Some of the images on the card recipes get resized to the wrong height and width on screens with a resolution between small and large screens.
 
 ## Deployment
 
