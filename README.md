@@ -150,7 +150,7 @@ This project was deployed to Heroku. Find the steps bellow:
 9. Create a remote to my local repository (heroku git:remote -a appName)
 10. Push to Github and Heroku simulataneously (git push && git push heroku master)
 
-To submit any changes to my code I follow steps number 9 and 10:
+To push new code I follow steps number 9 and 10:
 - Create a remote to my local repository (heroku git:remote -a appName)
 - Push to Github and Heroku simulataneously (git push && git push heroku master)	
 
