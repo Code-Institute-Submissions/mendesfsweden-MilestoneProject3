@@ -74,7 +74,7 @@ body {
     color: black;
 }
 
-/*-----------recipe.html------------*/
+/*-----------recipe(s)------------*/
 
 .btn-edit {
     background: #269014;
@@ -109,8 +109,6 @@ body {
     margin-left: 20px;
 }
 
-/*-----------recipes.html------------*/
-
 .border-search-bar {
     border-top:none;
     border-left:none;
@@ -121,8 +119,6 @@ body {
 .arrow {
     color: black;
 }
-
-/*-----------recipe cards------------*/
 
 .card-recipe {
     border:none;
@@ -144,8 +140,6 @@ body {
         max-height: 245px;
     }
 }
-
-/*-----------add/edit/recipe and recipes pages------------*/
 
 .page-title {
     margin-top: 120px;
