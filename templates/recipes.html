@@ -20,11 +20,11 @@
 <div class="container">
     <div class="boxed ">
         <div class="row row-cols-1 row-cols-md-3">
-            {% for recipe in recipes %}
+            {% for rec in recipes %}
             <a href="{{url_for('get_recipe', recipe_id=rec._id)}}">
                 <div class="col mb-4 card-new">
                     <div class="card card-recipe">
-                        {% if not recipe.image %}
+                        {% if not rec.image %}
                         <img src="/static/images/default_image.png" class="card-img-top img-h" alt="...">
                         {% else %}
                         <div class="img-container">
@@ -32,10 +32,10 @@
                         </div>
                         {% endif %}
                         <div class="card-body">
-                            <h5 class="card-title">{{recipe.name}}</h5>
+                            <h5 class="card-title">{{rec.name}}</h5>
                             <p class="card-text">
                                 <!--{{rec.ingredients if rec.ingredients.__len__() < 50 else rec.ingredients[:50] + '...'}}-->
-                                Preparation Time: {{recipe.prep_time}}
+                                Preparation Time: {{rec.prep_time}}
                             </p>
                         </div>
                     </div>
