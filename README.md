@@ -37,6 +37,9 @@ This project is a recipes dictionary. The main goal is to make it possible for t
     -   #### Imagery
         -   All the images are food related. The user can add an image for each and every added recipe by adding a URL to the image field. If the user does not supply a image URL, a default image (website logo) will be displayed instead.
         
+    -   ### Wireframes
+        -   [View Mockups](https://github.com/mendesfsweden/MilestoneProject3/tree/master/static/mockups) (There are file names without a reference to the type of screen - Mobile or Desktop - as the layout is the same on both. For that reason, the navbar contains only the logo and the green button at the bottom of the page is without any text)
+        
 ## Features
 
 -   Responsive on all device sizes
