@@ -42,7 +42,7 @@ body {
 .header-home {
     color: #fafafa;
     font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     padding-top: 250px; 
     width: 50%;
  }
@@ -56,6 +56,12 @@ body {
 @media only screen and (max-width: 430px) {
     .divider {
         width: 75%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .header-home {
+        font-size: 24px;
     }
 }
 
