@@ -59,23 +59,6 @@ body {
     }
 }
 
-/*-----------footer------------*/
-
-.social-media {
-    background: #269014;
-    height: 100px;
-}
-
-.social-links {
-    color: #fafafa;
-    padding: 10px;
-    font-size: 30px;
-}
-
-.social-links:hover {
-    color: black;
-}
-
 /*-----------recipe(s)------------*/
 
 .btn-edit {
@@ -149,6 +132,23 @@ body {
 
 .title-center-text {
     margin: 0 auto;
+}
+
+/*-----------footer------------*/
+
+.social-media {
+    background: #269014;
+    height: 100px;
+}
+
+.social-links {
+    color: #fafafa;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.social-links:hover {
+    color: black;
 }
 
 /*-----------hovers------------*/
