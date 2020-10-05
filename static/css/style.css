@@ -59,7 +59,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 460px) {
     .header-home {
         font-size: 24px;
     }
